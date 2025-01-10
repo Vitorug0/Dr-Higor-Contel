@@ -1,0 +1,172 @@
+
+.container-footer #footer-logo img{
+    height: 17.5vh;
+    padding-right: 10rem;
+}
+
+footer{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    position: static;
+    bottom: 0vh;
+    width: 100% !important;
+    background-image: url('../assets/banner.jpg');
+    color: var(--white);
+}
+
+.container-footer{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 5rem;
+
+    flex-wrap: wrap;
+}
+
+
+.container-footer h2{
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.container-footer p{
+    font-size: 1rem;
+}
+
+.content-footer:nth-child(3){
+    width: 25%;
+}
+
+.content-footer a{
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.content-footer #map p{
+    margin-top: -1.25%;
+}
+
+.container-footer .content-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+
+    transition: all ease-in-out 0.3s;
+}
+
+.content-footer a:hover > .icon-variant1{
+    stroke: #fff;
+    transition: all ease-in-out 0.3s;
+}
+
+#copy{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-top: 2px solid var(--white);
+}
+
+#copy a{
+    color: var(--white);
+    transition: all ease-in-out 0.3s;
+}
+
+#copy a:hover{
+    color: #CFDD19;
+}
+
+
+.icon-variant1{
+    stroke: #DFDFE1;
+    flex-shrink: 0;
+    transition: all ease-in-out 0.3s;
+}
+
+@media(max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        position: static;
+        bottom: 0vh;
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .container-footer {
+        width: 100%; /* Ocupa a largura total */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem; /* Adiciona um espaço entre os elementos */
+        margin: 0;
+    }
+
+    .container-footer .content-footer {
+        width: 100%; /* Ocupa a largura total */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .content-footer a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* Centraliza o texto */
+        text-align: center;
+        margin: 0;
+    }
+
+    .content-footer a p {
+        white-space: nowrap; /* Evita quebra de linha */
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        display: none;
+        
+    }
+
+    #footer-logo {
+        display: none; /* Oculta o logo para dispositivos menores */
+        margin: 0;
+        padding: 0;
+    }
+
+    .redes-sociais {
+        display: flex;
+        justify-content: center; /* Centraliza os ícones */
+        gap: 0.5rem;
+        text-align: center;
+        margin: 0;
+        font-size: 1.15rem;
+        
+        
+    }
+
+    .icon-variant1{
+        width: 48px;
+        height: 38px;
+        margin: 3px;
+    }
+}

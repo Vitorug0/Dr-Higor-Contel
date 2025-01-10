@@ -1,0 +1,161 @@
+section {
+    padding-top: 10vh;
+    padding-bottom: 5%;
+    background-color: #1F1F1F; /* Define uma cor sólida, ajuste conforme necessário */
+    background-position: 100% 115%;
+    background-repeat: no-repeat;
+    background-size: 40vw auto;
+}
+
+section h1{
+    padding-top: 0;
+    margin-bottom: 5%;
+}
+
+#blog-page .centered-title-bar{
+    color: #FFFFFF;
+}
+
+#blog-page .centered-title-bar::after,
+#blog-page .centered-title-bar::before{
+    width: 40%;
+    background-color: var(--blue);
+}
+
+
+.blog-grid {
+    width: 90%;
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens dentro do contêiner */
+    align-items: center;
+    gap: 3rem;
+    row-gap: 5rem;
+    margin-bottom: 50px;
+}
+
+.article-card {
+    border-radius: 1rem;
+    background-color: var(--gray);
+    width: 30%;
+    /* Remova a altura fixa */
+    min-height: 650px; /* Define uma altura mínima */
+    max-height: 700px; /* Define uma altura mínima */
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.25);
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Para alinhar conteúdo em coluna */
+    justify-content: space-between; /* Distribui o conteúdo para que o botão apareça */
+    text-align: center;
+}
+.article-card::before{
+    content: '';
+    width: 2rem;
+    height: 4rem;
+
+    background-color: var(--orange);
+
+    position: absolute;
+    
+
+    right: 1rem;
+
+    box-shadow: 5px 4px 7.1px 0px rgba(0, 0, 0, 0.17);
+
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.img-container{
+    background-color: var(--white);
+    height: 200px;
+    width: 100%;
+    position: relative;
+    
+    
+    
+}
+.imagemBlog{
+    object-fit: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o botão esteja sempre visível */
+    gap: 1rem;
+    padding: 1rem;
+    flex-grow: 1; /* Faz com que a área de texto cresça conforme necessário */
+}
+
+.title{
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: #DFDFE1;
+    text-align: center;
+}
+
+.description{
+    font-size: 14px;
+    text-align: justify;
+}
+
+.leia-mais {
+    height: 6vh;
+    width: auto; /* Permite que o botão tenha o tamanho adequado ao seu conteúdo */
+    min-width: 150px; /* Garante um tamanho mínimo para o botão */
+    border-radius: 16px;
+    border: none;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 2rem;
+    display: inline-block; /* Garante que o botão se comporte corretamente no layout */
+    text-align: center;
+    align-items: center;
+}
+
+.leia-mais a {
+    color: #000002 !important;
+    display: block; /* Garante que o link seja tratado como um bloco para o botão */
+    text-align: center;
+}
+.leia-mais:hover{
+    transform: scale(1.1);
+
+    box-shadow: 0px 0px 7.699999809265137px 3px #DFDFE1;
+}
+
+@media(max-width: 768px){
+    .article-card{
+        width: 100%;
+    }
+
+    .search-filter{
+        width: 90%;
+        margin-left: 5%
+    }
+
+    #blog-page .centered-title-bar::after,
+    #blog-page .centered-title-bar::before{
+    width: 30%;
+    background-color: var(--blue);
+    }
+
+    .leia-mais{
+        width: 30vw;
+    }
+}

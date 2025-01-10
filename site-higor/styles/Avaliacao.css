@@ -1,0 +1,119 @@
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #323747;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 60px;
+    
+}
+
+.carousel {
+
+    display: flex;
+    flex-wrap: nowrap; /* Evita que os itens quebrem linha */
+    transition: transform 0.5s ease;
+    align-items: center;
+
+    
+}
+
+.carousel-item {
+    flex: 0 0 33.33%; /* Ocupa um terço do contêiner por padrão */
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.client-info {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.client-name {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.client-rating {
+    font-size: 20px;
+    color: #FFD700;
+}
+
+/* Responsividade para telas médias */
+@media (max-width: 1238px) {
+    .carousel-item {
+        flex: 0 0 50%; /* Ocupa metade do contêiner */
+    }
+    .carousel-container {
+        width: 70%;
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 0 0 100%; /* Ocupa 100% do contêiner */
+    }
+    .carousel-container {
+        padding: 15px;
+        width: 75%;
+    }
+    .client-info {
+        font-size: 16px;
+    }
+    .client-rating {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 563px) {
+    .carousel-container {
+        width: 87%;
+    }
+
+    
+    
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+    .carousel-container {
+        padding: 10px;
+    }
+    .carousel-item {
+        padding: 5px;
+    }
+    .carousel-btn {
+        font-size: 18px;
+    }
+    .client-info {
+        font-size: 14px;
+    }
+    .client-rating {
+        font-size: 16px;
+    }
+}

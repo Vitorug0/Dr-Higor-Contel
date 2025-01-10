@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, a{
+    font-family: 'Inter', sans-serif;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --orange: #ffffff;
+    --blue: #ececec;
+    --gray: #282E3C;
+    --white: #ffffff;
+    --black: #000;
+}
+
+body{
+    min-height: 100vh;
+    position: relative;
+    background-color: #1e2128;
+    
+    
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.centered-title-bar{
+    width: 100%;
+    margin-top: 5%;
+
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 2rem;
+    letter-spacing: 8px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+
+    position: relative;
+
+    text-align: center;
+}
+
+.centered-title-bar::after,
+.centered-title-bar::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    background-color: var(--orange);
+
+    top: 50%;
+}
+
+.centered-title-bar::after{
+    left: 0;
+}
+
+.centered-title-bar::before{
+    right: 0;
+}
+
+@media (max-width: 768px) {
+
+    body{
+        min-height: 100vh;
+        position: relative;
+        background-color: #1e2128;
+        min-width: 100vw;
+        
+    }
+
+
+    .mobile.carrossel-mobile-container{
+        width: 100%;
+        height: 100%;
+
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        display: block;
+
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        overflow-y: hidden
+    }
+
+    .carrossel-mobile-content{
+        height: 100%;
+
+        max-width: 2076px;
+    
+        overflow: hidden;
+    
+        display: flex;
+        justify-content: start;
+    }
+
+    .centered-title-bar{
+   
+        font-size: 26px;
+    
+    }
+    #esp{
+        font-size: 20px;
+    }
+}

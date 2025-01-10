@@ -1,0 +1,80 @@
+#template{
+    padding-top: 10vh;
+    background-color: #1F1F1F; /* Define uma cor sólida, ajuste conforme necessário */
+    padding-bottom: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+    position: relative;
+}
+
+
+.template-column{
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-header{
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+.title-header h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.title-header h3{
+    font-size: 1.25rem;
+    text-transform: lowercase;
+    font-weight: normal;
+
+    margin-top: 0.5rem;
+}
+
+.datalist{
+    align-items: flex-start;
+    font-size: 0.75rem;
+    font-family: 'Inter', sans-serif;
+
+    font-weight: Light;
+}
+
+.datalist a{
+    color: var(--orange);
+}
+
+.img-container{
+    padding-bottom: 3%;
+}
+
+.img-container img{
+    height: auto;
+}
+
+.article-content{
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: aliceblue;
+    padding-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+    #template{
+        padding-top: 25vh;
+
+        padding-bottom: 15vh;
+    }
+
+    .title-header h1{
+        font-size: 2rem;
+    }
+}

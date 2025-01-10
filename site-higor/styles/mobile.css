@@ -1,0 +1,20 @@
+.mobile{
+    display: none;
+}
+
+.desktop{
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .mobile{
+        display: flex;
+    }
+
+    .desktop{
+        display: none;
+    }
+}
+
+
+

@@ -1,0 +1,111 @@
+header{
+    min-height: 50vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner{
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+#sobrepos{
+    position: absolute;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 0.5rem
+}
+
+#sobrepos h1{
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+}
+
+#sobrepos h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+#sobrepos button{
+    height: 8vh;
+    width: 17.5vw;
+            
+    border-radius: 16px;
+    border: none;
+
+    background-color: #4dc3ff;
+
+    text-transform: uppercase;
+    color: #1F1F1F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    margin-top: 2rem;
+
+    transition: all 0.3s ease-in-out;
+}
+
+#sobrepos button:hover{
+    transform: scale(1.1);
+
+    box-shadow: 0px 0px 7.699999809265137px 3px #DFDFE1;
+}
+
+@media (max-width: 768px){
+
+    
+    header{
+        overflow: hidden;
+        min-width: 100vw;
+    }
+    
+    #banner{
+    z-index: 0;
+    min-width: 100vw; /* Define a largura como 100% da viewport */
+    height: 80vh; /* Define a altura como 100% da viewport */
+    margin: 0; /* Remove possíveis margens */
+    padding: 0; /* Remove possíveis paddings */
+
+    }
+
+    #sobrepos button{
+        height: 10vh;
+        width: 50vw;
+    }
+
+    #sobrepos h1{
+        width: 70%;
+        font-size: 1.5rem;
+    }
+
+    #sobrepos h1 span{
+        font-size: 2.5rem;
+    }
+
+    #sobrepos h2{
+        width: 80%;
+        margin-left: 10%;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+}

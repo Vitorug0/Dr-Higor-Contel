@@ -1,0 +1,171 @@
+.portfolio-section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+    padding: 30px 0; /* Adicione padding para controle de altura */
+}
+
+.portfolio-content {
+    width: 100%;
+    max-width: 100%; /* Define um limite máximo para o conteúdo */
+    display: flex;
+    background-image: url('../assets/banner.jpg');
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    overflow: hidden;
+}
+
+.text-content {
+    text-align:center;
+    padding: 60px 100px; /* Aumente o valor do padding direito */
+    flex: 1;
+    color: aliceblue;
+}
+.text-content h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 5em;
+    margin-bottom: 10px;
+    color: #4dc3ff;
+}
+
+.text-content h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+
+}
+
+
+
+.text-content .cta-button {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #1F1F1F;
+    background-color: #4dc3ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.7em;
+    text-decoration: none;
+    margin-top: 29px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+}
+
+.text-content .cta-button:hover {
+    background-color: #333333; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento */
+}
+
+.text-content .cta-button:active {
+    transform: scale(1); /* Volta ao tamanho original ao clicar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida ao clicar */
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-img {
+    max-height: 30%; /* Reduz a largura da imagem */
+    padding: 5px;
+    object-fit: contain;
+}
+
+
+
+@media (max-width: 768px) {
+    .image-content {
+      
+        display: none;
+        
+    }
+
+    .portfolio-section {
+        align-items: center;
+    }
+
+    .portfolio-content {
+        width: 100%;
+        max-width: 100%; /* Define um limite máximo para o conteúdo */
+        max-height: 50%;
+        
+       
+    }
+    .text-content {
+        padding: 40px 50px; /* Reduz o padding */
+    }
+    
+    .text-content h2 {
+        font-size: 1.5em; /* Diminui o tamanho da fonte */
+    }
+
+    .text-content p,
+    .text-content .price {
+        font-size: 1em; /* Ajusta o tamanho da fonte */
+    }
+
+    .text-content .cta-button {
+        font-size: 1em;
+        padding: 10px 20px; /* Reduz o padding do botão */
+    }
+    
+    .portfolio-content {
+        flex-direction: column; /* Muda para layout vertical em telas menores */
+    }
+
+    .image-content {
+        height: 250px; /* Define uma altura fixa para a imagem em layout vertical */
+    }
+}
+
+/* Responsividade para celulares (telas de até 480px) */
+
+@media (max-width: 680px) {
+    .text-content h1 {
+        font-size: 4em;
+    }
+}
+@media (max-width: 480px) {
+    .text-content h1 {
+        font-size: 3em;
+    }
+
+    .text-content {
+        padding: 20px 20px; /* Reduz o padding ainda mais */
+    }
+    
+    .text-content h2 {
+        font-size: 1.2em;
+    }
+
+    .text-content p,
+    .text-content .price {
+        font-size: 0.9em;
+    }
+
+    .text-content .cta-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .image-content {
+        height: 200px; /* Altura ajustada para imagens em telas muito pequenas */
+    }
+    
+    .portfolio-content {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0; /* Remove o border-radius em telas muito pequenas */
+    }
+}

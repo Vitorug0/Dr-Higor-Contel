@@ -1,0 +1,309 @@
+#servicos{
+    background-image: linear-gradient#1F1F1F 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+#servicos .centered-title-bar::after,
+#servicos .centered-title-bar::before{
+    min-width: 25%;
+    width: min-content;
+}
+
+.card-container{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15%;
+    row-gap: 2rem;
+}
+
+.card{
+    width: 40%;
+    height: 350px;
+
+    transition: transform 0.8s;
+	transform-style: preserve-3d;
+    position: relative;
+}
+
+.card-front,
+.card-back{
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        position: absolute;
+        backface-visibility: hidden;
+}
+
+.card-front{
+    padding-top: 3rem;
+    justify-content: start;
+    gap: 1.5rem;
+}
+
+
+
+.card-front span{
+    color: var(--white);
+
+    font-size: 5rem;
+}
+
+.card-front h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.25rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.card-back{
+    transform: rotateY(180deg);
+}
+
+.card-back h4{
+    text-transform: uppercase;
+    color: var(--orange);
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.card-back p{
+    font-size: 0.8rem;
+    color: var(--white);
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.card-back button{
+    
+    color: var(--white);
+}
+
+.card-back button:hover{
+    transform: scale(1.1);
+
+    box-shadow: 0px 0px 7.699999809265137px 3px #DFDFE1;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+#servicos button{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #323747;
+    background-color: var(--blue);
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#servicos button:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 7.699999809265137px 3px var(--blue);
+}
+
+#servicos .card-container + button{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    font-size: 1rem;
+    background-color: var(--blue);
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+#servicos .card-container + button span{
+    letter-spacing: 0;
+}
+
+#servicos .card-container + button:hover{
+    transform: scale(1.15);
+
+    background-color: var(--orange);
+    box-shadow: 0px 0px 7.699999809265137px 3px #DFDFE1;
+}
+
+.domot{
+    background-image: url('../assets/1.jpg');
+    background-position: center;
+}
+
+#domot-back{
+    background-image: url('../assets/1.jpg');
+    background-position: center;
+}
+
+.agro{
+    background-image: url('../assets/2.jpg');
+    background-position: center;
+}
+
+#agro-back{
+    background-image: url('../assets/2.jpg');
+    background-position: center;
+}
+
+.imp{
+    background-image: url('../assets/3.jpg');
+    background-position: center;
+}
+
+#imp-back{
+    background-image: url('../assets/3.jpg');
+    background-position: center;
+}
+
+.adeq{
+    background-image: url('../assets/4.jpg');
+    background-position: center;
+}
+
+#adeq-back{
+    background-image: url('../assets/4.jpg');
+    background-position: center;
+}
+
+@media (max-width: 768px){
+    #servicos .centered-title-bar::after,
+    #servicos .centered-title-bar::before{
+        display: none;
+    }
+
+    #servicos .carrossel-mobile-content{
+        width: 300%;
+    }
+
+    .carrossel-mobile-card-servicos{
+        aspect-ratio: 246/190;
+
+        max-width: 519px;
+        max-height: 400px;
+        width: 25%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        border-radius: 15px;
+
+        overflow: hidden;
+    }
+
+    .carrossel-mobile-card-servicos{
+        margin-left: 1rem;
+    }
+    
+    .carrossel-mobile-card-servicos:last-child{
+        margin-right: 1rem;
+    }
+
+    .carrossel-mobile-card-servicos .front-card{
+        width: 100%;
+        height: 100%;
+        
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
+    
+        color: var(--white);
+
+        transition: 0.3s all ease-in-out;
+    }
+
+    .back-card-serv{
+        width: 90%;
+        height: 90%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        color: var(--white);
+        
+        font-size: 0.75rem;
+
+        visibility: hidden;
+        opacity: 0%;
+
+        z-index: -1;
+
+        transition: 0.3s all ease-in-out;
+    }
+
+    .carrossel-mobile-card-servicos .front-card span{
+        font-size: 3rem;
+    }
+
+    .carrossel-mobile-card-servicos .front-card h3{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .carrossel-mobile-card-servicos .front-card #buttonCard{
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        font-size: 1rem;
+        background-color: var(--orange);
+    }
+
+    .front-card.not-displayed{
+        visibility: hidden;
+        opacity: 0%;
+    }
+
+    .front-card.not-displayed + .back-card-serv{
+        visibility: visible;
+        opacity: 100%;
+
+        z-index: 1;
+    }
+
+   
+}
